@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   render: {
     maxHeight: '70vh',
     overflowY: 'scroll',
-    background: '#f4f4f4',
+    background: '#ffffff',
     padding: '24px',
   }
 }));

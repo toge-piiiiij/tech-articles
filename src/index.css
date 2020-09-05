@@ -77,11 +77,11 @@ div, ul {
  
  /* Inline code */
  :not(pre) > code[class*="language-"] {
-   padding: .2em;
-   padding-top: 1px;
-   padding-bottom: 1px;
-   background: #f8f8f8;
-   border: 1px solid #dddddd;
+   padding: 0 2px ;
+   background: #F4F5E0;
+   border: 1px solid #1F5C35;
+   color: #1F5C35;
+   border-radius: 3px;
  }
  
  .token.comment,

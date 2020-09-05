@@ -4,18 +4,17 @@ import PrismCode from '../../../components/PrismCode'
 import InlineCode from '../../../components/InlineCode';
 
 
-function CherryPick() {
+function Reset() {
     const gits =
         [
-            '$ git cherry-pick [commit]',
-            `$ git cherry-pick [commit] -x`,
-            '$ git cherry-pick [commit] -e',
-            '$ git cherry-pick [commit] -n',
+            '$ git reset [file]',
+            '$ git reset [commit]',
+            '$ git rebase [prevCommit] -i',
         ]
     return (
         <div>
             <Typography variant="body1" gutterBottom>
-                Normally pick, keep message
+               Turn staged file to unstaged.
             </Typography>
             <PrismCode code={gits[0]} language="sh" />
 
@@ -29,13 +28,8 @@ function CherryPick() {
                 edit the commit prior to committing.
             </Typography>
             <PrismCode code={gits[2]} language="sh" />
-
-            <Typography variant="body1" gutterBottom>
-                Do not commit, just stage the changes.
-            </Typography>
-            <PrismCode code={gits[3]} language="sh" />
         </div>
     );
 }
 
-export default CherryPick;
+export default Reset;

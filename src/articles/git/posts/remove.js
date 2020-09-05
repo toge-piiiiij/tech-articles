@@ -4,18 +4,24 @@ import PrismCode from '../../../components/PrismCode'
 import InlineCode from '../../../components/InlineCode';
 
 
-function CherryPick() {
+function Remove() {
     const gits =
         [
-            '$ git cherry-pick [commit]',
-            `$ git cherry-pick [commit] -x`,
-            '$ git cherry-pick [commit] -e',
-            '$ git cherry-pick [commit] -n',
+            `# git rm = rm  + git add
+$ git rm [file]`,
+            '$ git rm -r [folder] ',
+            '$ git rm --cached [filename]',
+            '$ git rm -r --cached [dirName]',
         ]
     return (
         <div>
             <Typography variant="body1" gutterBottom>
-                Normally pick, keep message
+               Remove file and let git know
+            </Typography>
+            <PrismCode code={gits[0]} language="sh" />
+
+            <Typography variant="body1" gutterBottom>
+               Remove folder and let git know
             </Typography>
             <PrismCode code={gits[0]} language="sh" />
 
@@ -29,13 +35,8 @@ function CherryPick() {
                 edit the commit prior to committing.
             </Typography>
             <PrismCode code={gits[2]} language="sh" />
-
-            <Typography variant="body1" gutterBottom>
-                Do not commit, just stage the changes.
-            </Typography>
-            <PrismCode code={gits[3]} language="sh" />
         </div>
     );
 }
 
-export default CherryPick;
+export default Remove;
