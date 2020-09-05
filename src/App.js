@@ -10,7 +10,7 @@ function App() {
     <div className="tech-articles">
       <div className="article-category">
         <NavLink to="/randomlymurmur" activeClassName="current-category">
-          <Button size="large">Randomly MurMur</Button>
+          <Button size="large">Randomly MurMur..</Button>
         </NavLink>
         <NavLink to="/git" activeClassName="current-category">
           <Button size="large">Git</Button>
