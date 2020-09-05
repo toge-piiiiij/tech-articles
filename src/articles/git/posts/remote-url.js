@@ -9,17 +9,23 @@ function RemoteUrl() {
         [
             '$ git remote add jq https://github.com/jquery/jquery.git',
 
-            `$ git remote -v\n
+            `$ git remote -v
 # jq      https://github.com/jquery/jquery.git (fetch)
 # jq      https://github.com/jquery/jquery.git (push)
 # origin  https://github.com/[account]/[repo].git (fetch)
 # origin  https://github.com/[account]/[repo].git (push)`,
 
-            `$ git remote\n$git remote rm jq
+            `$ git remote
+$ git remote rm jq
 # jq
 # origin`,
 
             `$ git remote set-url origin [new repo]`,
+
+            '$ git remote remove jq',
+
+            `$ git remote set-url --push origin DISABLED`
+
         ]
     return (
         <div>
@@ -43,6 +49,19 @@ function RemoteUrl() {
             </Typography>
             <PrismCode code={gits[3]} language="sh" />
 
+
+            <Typography variant="body1" gutterBottom>
+                Remove remote spec repo, delete connection
+            </Typography>
+            <PrismCode code={gits[4]} language="sh" />
+
+
+            <Typography variant="body1" gutterBottom>
+                Make spec repo cannot push, replace any nonsensical URI like <b>DISABLED</b>
+            </Typography>
+            <PrismCode code={gits[5]} language="sh" />
+
+            
         </div>
     );
 }
