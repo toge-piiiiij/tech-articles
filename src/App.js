@@ -1,15 +1,30 @@
 import React from 'react';
 import './App.css';
+import RandomlyMurMur from './articles/randomly-murmur'
+import Git from './articles/git'
+import { Switch, Route, NavLink } from "react-router-dom";
+import { Button } from '@material-ui/core'
 
 function App() {
-  // TODO: for-loop rendering
-  // 用<Route> 去Render
   return (
-    <div className="App">
-      <a href="tech-articles/golang/first-go-lang.html">first-go-lang</a>
-      <a href="tech-articles/golang/second-go-lang.html">second-go-lang</a>
-      <a href="tech-articles/angular/angular1.html">angular -1</a>
-      <a href="tech-articles/angular/angular2">angular -2</a>
+    <div className="tech-articles">
+      <div className="article-category">
+        <NavLink to="/randomlymurmur" activeClassName="current-category">
+          <Button size="large">Randomly MurMur</Button>
+        </NavLink>
+        <NavLink to="/git" activeClassName="current-category">
+          <Button size="large">Git</Button>
+        </NavLink>
+      </div>
+
+      <Switch>
+        <Route path="/randomlymurmur">
+          <RandomlyMurMur />
+        </Route>
+        <Route path="/git">
+          <Git />
+        </Route>
+      </Switch>
     </div>
   );
 }
