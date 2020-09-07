@@ -23,23 +23,23 @@ function Reset() {
 
             <Typography variant="body1" gutterBottom>
                 Tear apart commit,<br></br>
-               Prev committed changes is still on staged<br></br>
-               Keep current status is still staged or untracked.
+                Prev committed changes is still on staged<br></br>
+                Keep current status is still staged or untracked.
             </Typography>
             <PrismCode code={gits[0]} language="sh" />
 
             <Typography variant="body1" gutterBottom>
                 Tear apart commit<br></br>
-               Prev committed changes is moved to untracked<br></br>
-               Keep current status is still staged or untracked.
+                Prev committed changes is moved to untracked<br></br>
+                Keep current status is still staged or untracked.
             </Typography>
             <PrismCode code={gits[1]} language="sh" />
 
             <Typography variant="body1" gutterBottom>
                 Tear apart commit<br></br>
-               Give up committed changes<br></br>
-               Give up current status which is staged, also the new files<br></br>
-               Untracked new files are still untracked.
+                Give up committed changes<br></br>
+                Give up current status which is staged, also the new files<br></br>
+                Untracked new files are still untracked.
             </Typography>
             <PrismCode code={gits[2]} language="sh" />
 

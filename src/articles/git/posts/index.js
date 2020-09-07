@@ -8,6 +8,8 @@ import Reset from "./reset";
 import Remove from "./remove";
 import Reflog from "./reflog";
 import Config from "./config";
+import Stash from "./stash";
+import Diff from "./diff";
 
 export default [
     { component: CreateTag, title: 'Create Tag', path: 'create-tag' },
@@ -20,4 +22,6 @@ export default [
     { component: Remove, title: 'Remove', path: 'remove' },
     { component: Rebase, title: 'Rebase', path: 'rebase' },
     { component: Config, title: 'Config', path: 'config' },
+    { component: Stash, title: 'Stash', path: 'stash' },
+    { component: Diff, title: 'Diff', path: 'diff' },
 ]
