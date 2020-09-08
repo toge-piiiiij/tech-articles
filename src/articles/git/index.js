@@ -54,7 +54,7 @@ function Gits() {
         )}
       </List>
       <div className={classes.render}>
-        {Post}
+        {Post || 'NOTHING'}
       </div>
     </div>
   );

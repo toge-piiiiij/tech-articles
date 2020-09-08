@@ -5,63 +5,40 @@ import InlineCode from '../../../components/InlineCode';
 
 
 function RemoteUrl() {
-    const gits =
-        [
-            '$ git remote add jq https://github.com/jquery/jquery.git',
-
-            `$ git remote -v
-# jq      https://github.com/jquery/jquery.git (fetch)
-# jq      https://github.com/jquery/jquery.git (push)
-# origin  https://github.com/[account]/[repo].git (fetch)
-# origin  https://github.com/[account]/[repo].git (push)`,
-
-            `$ git remote
-$ git remote rm jq
-# jq
-# origin`,
-
-            `$ git remote set-url origin [new repo]`,
-
-            '$ git remote remove jq',
-
-            `$ git remote set-url --push origin DISABLED`
-
-        ]
     return (
         <div>
             <Typography variant="body1" gutterBottom>
-                Add a new repo address for <InlineCode>origin</InlineCode>
+                新增一個叫做jq的遠端倉庫地址<InlineCode>origin</InlineCode>
             </Typography>
-            <PrismCode code={gits[0]} language="sh" />
+            <PrismCode code={`$ git remote add jq https://github.com/jquery/jquery.git`} language="sh" />
 
             <Typography variant="body1" gutterBottom>
-                List the connections
+                列出倉庫與用途
             </Typography>
-            <PrismCode code={gits[1]} language="sh" />
+            <PrismCode code={`$ git remote -v
+# jq      https://github.com/jquery/jquery.git (fetch)
+# jq      https://github.com/jquery/jquery.git (push)
+# origin  https://github.com/[account]/[repo].git (fetch)
+# origin  https://github.com/[account]/[repo].git (push)`} language="sh" />
 
             <Typography variant="body1" gutterBottom>
                 I don't need that anymore
             </Typography>
-            <PrismCode code={gits[2]} language="sh" />
+            <PrismCode code={`$ git remote remove jq
+# or
+$ git remote rm jq`} language="sh" />
 
             <Typography variant="body1" gutterBottom>
-                Replace the address of <InlineCode>origin</InlineCode>
+                把該倉庫<InlineCode>origin</InlineCode>的遠端設定成其它的地方
             </Typography>
-            <PrismCode code={gits[3]} language="sh" />
-
+            <PrismCode code={`$ git remote set-url origin [new repo]`} language="sh" />
 
             <Typography variant="body1" gutterBottom>
-                Remove remote spec repo, delete connection
+                讓<InlineCode>origin</InlineCode>只有fetch功能，他的push遠端寫成無法辨認lol。
             </Typography>
-            <PrismCode code={gits[4]} language="sh" />
+            <PrismCode code={`$ git remote set-url --push origin DISABLED`} language="sh" />
 
 
-            <Typography variant="body1" gutterBottom>
-                Make spec repo cannot push, replace any nonsensical URI like <b>DISABLED</b>
-            </Typography>
-            <PrismCode code={gits[5]} language="sh" />
-
-            
         </div>
     );
 }

@@ -18,7 +18,7 @@ function Reset() {
     return (
         <div>
             <Typography variant="h5" gutterBottom>
-                Now let's suggest we want to status is back to last commit.
+                Now let's suggest we want status back to last commit.
             </Typography>
 
             <Typography variant="body1" gutterBottom>
@@ -67,6 +67,12 @@ function Reset() {
                 Only restore file whether it's staged or unstaged.
             </Typography>
             <PrismCode code={gits[6]} language="sh" />
+
+
+
+
+            <Typography variant="h5">staged to unstage</Typography>
+            <PrismCode code={`git reset file`}></PrismCode>
         </div>
     );
 }

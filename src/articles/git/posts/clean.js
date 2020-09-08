@@ -24,23 +24,23 @@ touch waittobeclean/bar.txt`,   // git clean -n 不會查到這裡,
         <div>
             <Typography variant="h5" gutterBottom>Like a draft, and stash is stack</Typography>
             <Typography variant="body1" gutterBottom>
-                Store current working status
+                ????
             </Typography>
-            <PrismCode code={gits[0]} language="sh" />
+            <PrismCode code={'$ git clean -f'} language="sh" />
 
 
 
             <Typography variant="body1" gutterBottom>
                 Restore the newest draft
             </Typography>
-            <PrismCode code={gits[1]} language="sh" />
+            <PrismCode code={'$ git clean -xf'} language="sh" />
 
 
 
             <Typography variant="body1" gutterBottom>
-                Restore the newest draft, but <b>keep it in the list.</b>
+                先確認一下等等會清什麼
             </Typography>
-            <PrismCode code={gits[2]} language="sh" />
+            <PrismCode code={`$ git clean -n`} language="sh" />
 
 
 

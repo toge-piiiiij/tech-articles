@@ -18,7 +18,7 @@ function CreateTag() {
 $ git rev-parse temp-apple
 # 750d2b113551ef2d8de397687f34600a7918d84c`,
         
-        `$ git tag second-temp-apple -a -m 'This is second tag with message`,
+        `$ git tag second-temp-apple -a -m 'This is second tag with message'`,
         
         `$ git cat-file -p second-temp-apple
 # object 750d2b113551ef2d8de397687f34600a7918d84c

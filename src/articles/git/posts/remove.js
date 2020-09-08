@@ -9,7 +9,7 @@ function Remove() {
         [
             `# git rm = rm  + git add
 $ git rm [file]`,
-            '$ git rm -r [folder] ',
+            '$ git rm -r [folder]',
             '$ git rm --cached [filename]',
             '$ git rm -r --cached [folder]',
             '$ git rm [file on staged]',
@@ -31,52 +31,55 @@ nothing to commit, working tree clean
     return (
         <div>
             <Typography variant="body1" gutterBottom>
-                Remove file and let git know
+                讓GIT知道有刪除檔案，刪除本身也是一種改動
             </Typography>
-            <PrismCode code={gits[0]} language="sh" />
+            <PrismCode code={`# git rm = rm  + git add\n$ git rm [file]`} language="sh" />
 
             <Typography variant="body1" gutterBottom>
                 Remove folder and let git know
             </Typography>
-            <PrismCode code={gits[1]} language="sh" />
+            <PrismCode code={'$ git rm -r [folder]'} language="sh" />
 
             <Typography variant="body1" gutterBottom>
-                If file is new to .git and already be added to staged: <InlineCode>A</InlineCode> -&gt; <InlineCode>??</InlineCode>
+                若檔案是新的，改動結果會是<b>未被追蹤<InlineCode>??</InlineCode></b>
             </Typography>
             <Typography variant="body1" gutterBottom>
-                If file is already recognized by git: <InlineCode>M</InlineCode> -&gt; <InlineCode>D</InlineCode> & <InlineCode>??</InlineCode>
+                如果檔案是在暫存區，改動結果會是<b>暫存區呈現刪除<InlineCode>D</InlineCode>＋未被追蹤<InlineCode>??</InlineCode></b>的雙重狀態
             </Typography>
-            <PrismCode code={gits[2]} language="sh" />
+            <PrismCode code={'$ git rm --cached [filename]'} language="sh" />
 
             <Typography variant="body1" gutterBottom>
                 edit the commit prior to committing.
             </Typography>
-            <PrismCode code={gits[3]} language="sh" />
+            <PrismCode code={`$ git rm -r --cached [folder]`} language="sh" />
 
             <Typography variant="h5" gutterBottom>Kind of confusing</Typography>
 
             <Typography variant="body1" gutterBottom>
+                在暫存區的都無法以此刪除
                 We cannot remove the staged file whether the file is new or not. <b>This failed.</b>
             </Typography>
-            <PrismCode code={gits[4]} language="sh" />
+            <PrismCode code={`$ git rm [file on staged]`} language="sh" />
             <Typography variant="body1" gutterBottom>
-                Or using <InlineCode>-f</InlineCode> will work for you!
+                但可以新增參數 <InlineCode>-f</InlineCode>達到你要的行為
             </Typography>
-            <PrismCode code={gits[5]} language="sh" />
+            <PrismCode code={`$ git rm -f [file on staged]\n$ git sts\n
+D  dir/d.txt\n?? dir/\n$ git ac 'remove'\nOn branch master\nnothing to commit, working tree clean\n`} language="sh" />
 
             <Typography variant="h5" gutterBottom><InlineCode>--cached</InlineCode> on folder?</Typography>
 
             <Typography variant="body1" gutterBottom>
+                你做的事情是徒勞無功的
                 Delete the folder but you use <InlineCode>--cached</InlineCode> for keeping the file inside.<br></br>
                 That means do nothing. Here's the result:
             </Typography>
-            <PrismCode code={gits[6]} language="sh" />
+            <PrismCode code={`$ git rm -r --cached dir/`} language="sh" />
 
 
             <Typography variant="body1" gutterBottom>
-                Delete directly, don't think too much lol
+                直接刪除
             </Typography>
-            <PrismCode code={gits[7]} language="sh" />
+            <PrismCode code={`$ git rm -r dir/`} language="sh" />
 
 
             <Typography variant="h5" gutterBottom><InlineCode>--cached</InlineCode> on file?</Typography>
@@ -84,7 +87,7 @@ nothing to commit, working tree clean
             <Typography variant="body1" gutterBottom>
                 You modified files, and create files, then add all to staged and run this:
             </Typography>
-            <PrismCode code={gits[8]} language="sh" />
+            <PrismCode code={`git rm -r --cached .`} language="sh" />
 
 
 
