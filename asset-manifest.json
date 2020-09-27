@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tech-articles/static/css/main.bfc13935.chunk.css",
+    "main.css": "/tech-articles/static/css/main.4d2162c0.chunk.css",
     "main.js": "/tech-articles/static/js/main.888c3012.chunk.js",
     "main.js.map": "/tech-articles/static/js/main.888c3012.chunk.js.map",
     "runtime-main.js": "/tech-articles/static/js/runtime-main.17cc65eb.js",
@@ -8,9 +8,9 @@
     "static/js/2.96820fbb.chunk.js": "/tech-articles/static/js/2.96820fbb.chunk.js",
     "static/js/2.96820fbb.chunk.js.map": "/tech-articles/static/js/2.96820fbb.chunk.js.map",
     "index.html": "/tech-articles/index.html",
-    "precache-manifest.68ad85f176386ceffd3d1e40b57c4f96.js": "/tech-articles/precache-manifest.68ad85f176386ceffd3d1e40b57c4f96.js",
+    "precache-manifest.bbe76e2bd96dab6ecdddac9c91bed08b.js": "/tech-articles/precache-manifest.bbe76e2bd96dab6ecdddac9c91bed08b.js",
     "service-worker.js": "/tech-articles/service-worker.js",
-    "static/css/main.bfc13935.chunk.css.map": "/tech-articles/static/css/main.bfc13935.chunk.css.map",
+    "static/css/main.4d2162c0.chunk.css.map": "/tech-articles/static/css/main.4d2162c0.chunk.css.map",
     "static/js/2.96820fbb.chunk.js.LICENSE.txt": "/tech-articles/static/js/2.96820fbb.chunk.js.LICENSE.txt",
     "static/media/murmur1.md": "/tech-articles/static/media/murmur1.230ff83d.md",
     "static/media/murmur2.md": "/tech-articles/static/media/murmur2.b0db7e42.md",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.17cc65eb.js",
     "static/js/2.96820fbb.chunk.js",
-    "static/css/main.bfc13935.chunk.css",
+    "static/css/main.4d2162c0.chunk.css",
     "static/js/main.888c3012.chunk.js"
   ]
 }
