@@ -38,7 +38,7 @@ This is second tag with message`,
     return (
         <div>
         <Typography variant="h6" gutterBottom>
-            Unannotated tag also normal & lightweight.
+            Unannotated tag also normal & lightweight.輕量型的
         </Typography>
         <PrismCode code={gits[0]} language="sh" />
 
