@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b324811648980b1106087fb4169b3077",
+    "revision": "d4da99cb5b105cb9084f7f32c5982235",
     "url": "/tech-articles/index.html"
   },
   {
-    "revision": "0c1d23e46a2095c5e8b8",
+    "revision": "d6f5a92fec672479dc22",
     "url": "/tech-articles/static/css/main.bfc13935.chunk.css"
   },
   {
-    "revision": "76a9b321aed7cf931f69",
-    "url": "/tech-articles/static/js/2.96820fbb.chunk.js"
+    "revision": "ffed4b48cc63a285804f",
+    "url": "/tech-articles/static/js/2.3c6d9e89.chunk.js"
   },
   {
-    "revision": "9af543164c89488da262a6f50793ba06",
-    "url": "/tech-articles/static/js/2.96820fbb.chunk.js.LICENSE.txt"
+    "revision": "1af35af5f0a21cc9004e449cf105badf",
+    "url": "/tech-articles/static/js/2.3c6d9e89.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0c1d23e46a2095c5e8b8",
-    "url": "/tech-articles/static/js/main.fcb36513.chunk.js"
+    "revision": "d6f5a92fec672479dc22",
+    "url": "/tech-articles/static/js/main.f890c0ab.chunk.js"
   },
   {
     "revision": "8d799a755d3ba216fd7a",
