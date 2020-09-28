@@ -48,82 +48,84 @@ tree 08c56681eceec443b14ad503fa7ebf1c46652c50
 author jia0_nn <linao264590000@gmail.com> 1599486115 +0800
 committer jia0_nn <linao264590000@gmail.com> 1599486115 +0800
 
-untracked files on master: 89d5d8e add and modi`
+untracked files on master: 89d5d8e add and modi`,
+
+            `$ git stash save --keep-index`
         ]
     return (
         <div>
             <Typography variant="h5" gutterBottom>Like a draft, and stash is stack</Typography>
             <Typography variant="body1" gutterBottom>
-                Store current working status
+                把現在所有的改動丟進去，除了untracked狀態的不行之外
             </Typography>
             <PrismCode code={gits[0]} language="sh" />
 
 
 
             <Typography variant="body1" gutterBottom>
-                Restore the newest draft
+                叫回來，不管之前是在工作目錄或是暫存區，都會回到工作目錄
             </Typography>
             <PrismCode code={gits[1]} language="sh" />
 
 
 
             <Typography variant="body1" gutterBottom>
-                Restore the newest draft, but <b>keep it in the list.</b>
+                叫回來，但與上面不同的是，還是會保留在stack裡面
             </Typography>
             <PrismCode code={gits[2]} language="sh" />
 
 
 
             <Typography variant="body1" gutterBottom>
-                Restore the second draft, but <b>keep it in the list.</b>
+                呼叫最新的第二個
             </Typography>
             <PrismCode code={gits[3]} language="sh" />
 
 
 
             <Typography variant="body1" gutterBottom>
-                Give up the first draft (newest)
+                移除目前stash stack裡面最新一個
             </Typography>
             <PrismCode code={gits[4]} language="sh" />
 
 
 
             <Typography variant="body1" gutterBottom>
-                Give up the second draft
+                移除目前stash stack裡面第二個
             </Typography>
             <PrismCode code={gits[5]} language="sh" />
 
 
             <Typography variant="body1" gutterBottom>
-                Remove all draft
+                清空
             </Typography>
             <PrismCode code={gits[6]} language="sh" />
 
 
 
             <Typography variant="body1" gutterBottom>
-                You can add a note as stash it.
+                也可以在丟給stash的時候給它訊息
             </Typography>
             <PrismCode code={gits[7]} language="sh" />
 
 
             <Typography variant="body1" gutterBottom>
-                Also bundle the files git hasn't recognized yet.
+                連帶untracked都丟過去
             </Typography>
             <PrismCode code={gits[8]} language="sh" />
 
 
             <Typography variant="h5" gutterBottom>Brainstorming</Typography>
             <Typography variant="body1" gutterBottom>
-                Modify <InlineCode>a, b</InlineCode>, remove <InlineCode>e, f</InlineCode> and create <InlineCode>x, y</InlineCode><br></br>
-                Then <InlineCode>git add a e x</InlineCode>
-                And we use <InlineCode>git stash -u</InlineCode>
+                改動<InlineCode>a, b</InlineCode>，刪除<InlineCode>e, f</InlineCode>，建立<InlineCode>x, y</InlineCode><br></br>
+                將<InlineCode>a e x</InlineCode>放到暫存區
+                現在我們下<InlineCode>git stash -u</InlineCode>的指令
             </Typography>
             <PrismCode code={gits[9]} language="sh" />
 
 
             <Typography variant="body1" gutterBottom>
-                Then check every parent in the stash object. These are <i>last commit</i>, <i>index</i> and <i>untracked</i>, respectively.
+                現在查看每個parent在幹什麼，分別是：<i>上個改動</i>, <i>工作目錄</i>以及<i>untracked</i>。
             </Typography>
             <PrismCode code={gits[10]} language="sh" />
             <PrismCode code={gits[11]} language="sh" />
@@ -131,7 +133,7 @@ untracked files on master: 89d5d8e add and modi`
 
 
             <Typography variant="body1" gutterBottom>
-                If we store it by using <InlineCode>git stash</InlineCode>, it only gets two parents.
+                如果剛剛的狀況只使用<InlineCode>git stash</InlineCode>，只會有列出兩個parents
             </Typography>
 
 
@@ -152,6 +154,10 @@ untracked files on master: 89d5d8e add and modi`
             </Typography>
 
 
+            <Typography variant="body1" gutterBottom>
+               只把工作目錄丟到stash，暫存區保留
+            </Typography>
+            <PrismCode code={gits[13]} language="sh" />
         </div>
     );
 }

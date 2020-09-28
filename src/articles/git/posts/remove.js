@@ -5,29 +5,6 @@ import InlineCode from '../../../components/InlineCode';
 
 
 function Remove() {
-    const gits =
-        [
-            `# git rm = rm  + git add
-$ git rm [file]`,
-            '$ git rm -r [folder]',
-            '$ git rm --cached [filename]',
-            '$ git rm -r --cached [folder]',
-            '$ git rm [file on staged]',
-            '$ git rm -f [file on staged]',
-            `$ git rm -r --cached dir/
-$ git sts
-D  dir/d.txt
-?? dir/
-$ git ac 'remove'
-On branch master
-nothing to commit, working tree clean
-`,
-
-
-            `$ git rm -r dir/`,
-            `git rm -r --cached .`
-
-        ]
     return (
         <div>
             <Typography variant="body1" gutterBottom>

@@ -20,35 +20,35 @@ function Reflog() {
     return (
         <div>
             <Typography variant="body1" gutterBottom>
-                It stores user actions.<br/>
+                這些行為都是一種紀錄：<br/>
                 {recognizedActions.map(a => <InlineCode>{a}</InlineCode>)} are all recognized.
             </Typography>
             <PrismCode code={gits[0]} language="sh" />
 
 
             <Typography variant="body1" gutterBottom>
-                <InlineCode>HEAD@{0}</InlineCode> means the newest
+                <InlineCode>HEAD@{0}</InlineCode>代表是最近一次行為
             </Typography>
 
 
             <Typography variant="body1" gutterBottom>
-                Delete spec record (and it happens to be <InlineCode>commit</InlineCode>)
+                刪除特定的紀錄，假設剛好是屬於commit的紀錄，這樣並不會真的去移除該commit
             </Typography>
             <PrismCode code={gits[1]} language="sh" />
 
 
             <Typography variant="body1" gutterBottom>
-                But it didn't remove commit actually.
+               用<InlineCode>git log</InlineCode>格式去顯示reflog
             </Typography>
             <PrismCode code={gits[2]} language="sh" />
 
             <Typography variant="body1" gutterBottom>
-                Delete all records
+                刪除所有行為記錄
             </Typography>
             <PrismCode code={gits[6]} language="sh" />
 
             <Typography variant="body1" gutterBottom>
-                Remove objects
+                移除實際上對應的物件檔案
             </Typography>
             <PrismCode code={gits[7]} language="sh" />
         </div>

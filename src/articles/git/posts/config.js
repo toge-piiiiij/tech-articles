@@ -18,35 +18,33 @@ function Config() {
         <div>
 
             <Typography variant="body1" gutterBottom>
-                Three levels configurations: {levels.map(l => <InlineCode>{`--${l}`}</InlineCode>)}
+                三種等級的git設定檔案{levels.map(l => <InlineCode>{`--${l}`}</InlineCode>)}
             </Typography>
 
 
             <Typography variant="body1" gutterBottom>
-                List all system configuration.
+                列出最高等級的設定
             </Typography>
             <PrismCode code={gits[0]} language="sh" />
 
             <Typography variant="body1" gutterBottom>
-                Saving your time!
+                寫給全域的指令，更方便組合要下的指令
             </Typography>
             <PrismCode code={gits[1]} language="sh" />
 
 
 
             <Typography variant="body1" gutterBottom>
-                You have Windows PC, need to cowork with cross-OS like unix-like, set it <InlineCode>true</InlineCode>.
-                cslf to lf when commit, get file update to local or checkout file will convert any lf file to cslf.<br />
-                MacOs or Linux, set it <InlineCode>input</InlineCode>, that means no need to convert to lf since you've already been lf. <br />
-
-                If the product is 100% sure working on Windows and all your dev tools are based on Windows, you could set it false.
+                現在是微軟電腦則讓它為true，代表在提交的時候把所有cslf變成lf，當你要更新或是轉branch時，會把lf轉為微軟電腦的csrf；
+                MacO或是Linux，則寫成<InlineCode>input</InlineCode>代表不需要轉換<br />
+                除非你確認你寫的產品都是在微軟環境使用就沒差不用改～
             </Typography>
             <PrismCode code={gits[2]} language="sh" />
 
 
 
             <Typography variant="body1" gutterBottom>
-                Input typo. Git will guess what you want and go run.
+                當指令有typo時，git會猜並且執行指令，一單位是100毫秒
             </Typography>
             <PrismCode code={gits[3]} language="sh" />
         </div>

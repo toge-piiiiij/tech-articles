@@ -43,12 +43,12 @@ This is second tag with message`,
         <PrismCode code={gits[0]} language="sh" />
 
         <Typography variant="body1" gutterBottom>
-            see the result then. tree, [parent], author, committer
+           看這個tag的資訊，跟用<InlineCode>git cat-file -p [commitID]</InlineCode>的資訊欄位一模一樣
         </Typography>
         <PrismCode code={gits[1]} language="sh" />
 
         <Typography variant="body1" gutterBottom>
-            get the real object, the real commit as you thought
+            承上，用這個去拿真正的物件，發現它的值就是該tag標在的commit值。
         </Typography>
         <PrismCode code={gits[2]} language="sh" />
 
@@ -58,20 +58,20 @@ This is second tag with message`,
         <PrismCode code={gits[3]} language="sh" />
 
         <Typography variant="body1">
-            result
+            跟剛剛看和unannotated的資料欄位都不同
         </Typography>
         <PrismCode code={gits[4]} language="sh" />
 
         <Typography variant="body1">
-            It's real commit
+            和unannotated印出來的不同：這是他自己的commit
         </Typography>
         <PrismCode code={gits[5]} language="sh" />
 
         <Typography variant="body1" gutterBottom>
-            You can use <InlineCode>git show</InlineCode> for display annotated tag.
+            <InlineCode>git show</InlineCode> for display annotated tag.
         </Typography>
         <Typography variant="body1" gutterBottom>
-            Unannotated is a just pointer to the commit
+            
         </Typography>
 
 
@@ -79,13 +79,13 @@ This is second tag with message`,
 
 
         <Typography variant="h6" gutterBottom>
-        Finally you can push all tags to remote
+            同步所有tag到遠端
         </Typography>
         <PrismCode code={gits[6]} language="sh" />
 
 
         <Typography variant="body1" gutterBottom>
-            ...or push spec tag
+            或是push特定的tag
         </Typography>
         <PrismCode code={gits[7]} language="sh" />
 

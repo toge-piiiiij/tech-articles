@@ -5,11 +5,6 @@ import InlineCode from '../../../components/InlineCode';
 
 
 function CherryPick() {
-    const gits =
-        [
-            '$ git cherry-pick [commit] -e',
-            '$ git cherry-pick [commit] -n',
-        ]
     return (
         <div>
             <Typography variant="body1" gutterBottom>
@@ -26,12 +21,12 @@ function CherryPick() {
             <Typography variant="body1" gutterBottom>
                 在提交之前改個訊息
             </Typography>
-            <PrismCode code={gits[2]} language="sh" />
+            <PrismCode code={'$ git cherry-pick [commit] -e'} language="sh" />
 
             <Typography variant="body1" gutterBottom>
                 先不提交，全部放在暫存區
             </Typography>
-            <PrismCode code={gits[3]} language="sh" />
+            <PrismCode code={'$ git cherry-pick [commit] -n'} language="sh" />
         </div>
     );
 }

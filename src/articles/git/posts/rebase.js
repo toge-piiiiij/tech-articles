@@ -16,6 +16,7 @@ function Rebase() {
             choose to edit commit message or do something then --continue
 # reword  : breaking point here, edit commit message
 # exec    : ?\n`,
+
             '$ git rebase [prevCommit] -i',
             '$ git rebase --onto [to] [from]',
 
@@ -23,7 +24,7 @@ function Rebase() {
         |
         C -> D -> E -> F`,
 
-            `$ git rebase --onto E C`,
+            `$ git rebase --onto E C1`,
 
 `A -> B -> C -> D -> E -> C1 -> D1 -> E1 -> F1
                        |
@@ -32,25 +33,25 @@ function Rebase() {
     return (
         <div>
             <Typography variant="body1" gutterBottom>
-               Go to vim mode
+               互動模式
             </Typography>
             <PrismCode code={gits[0]} language="sh" />
 
             <Typography variant="body1" gutterBottom>
-                Drop the current commit that you just mistakenly made! Make it <InlineCode>drop</InlineCode> and <InlineCode>:wq</InlineCode>
+                你不想要上一個commit，所以基於上上一個commit，進入互動去把上一個commit設為<InlineCode>drop</InlineCode>
             </Typography>
-            <PrismCode code={gits[1]} language="sh" />
+            <PrismCode code={'$ git rebase [prevCommit] -i'} language="sh" />
 
             <Typography variant="body1" gutterBottom>
-                Chop source as much as it can.
+                移植
             </Typography>
             <PrismCode code={gits[2]} language="sh" />
 
-            <Typography variant="h6" gutterBottom>For example:</Typography>
-            <PrismCode code={gits[3]} language="?" />
+            <Typography variant="h6" gutterBottom>現在</Typography>
+            <PrismCode code={gits[3]} language="sh" />
             <Typography variant="body1" gutterBottom>do</Typography>
             <PrismCode code={gits[4]} language="?" />
-            <Typography variant="body1" gutterBottom>and it turns out:</Typography>
+            <Typography variant="body1" gutterBottom>C1移植到了E</Typography>
             <PrismCode code={gits[5]} language="?" />
         </div>
     );

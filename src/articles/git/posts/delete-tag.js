@@ -12,11 +12,11 @@ function DeleteTag() {
     return (
         <div>
             <Typography variant="body1" gutterBottom>
-                Delete tag locally
+                刪除本地tag
             </Typography>
             <PrismCode code={gits[0]} language="sh" />
             <Typography variant="body1" gutterBottom>
-                Delete tag remotely
+                刪除遠端tag
             </Typography>
             <PrismCode code={gits[1]} language="sh" />
         </div>

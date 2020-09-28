@@ -22,7 +22,7 @@ function RemoteUrl() {
 # origin  https://github.com/[account]/[repo].git (push)`} language="sh" />
 
             <Typography variant="body1" gutterBottom>
-                I don't need that anymore
+                我不要這個倉庫了
             </Typography>
             <PrismCode code={`$ git remote remove jq
 # or
