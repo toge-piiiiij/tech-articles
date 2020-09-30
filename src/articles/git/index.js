@@ -18,36 +18,32 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '24px',
   },
   list: {
-    width: '100%',
     backgroundColor: theme.palette.background.paper,
     height: '70vh',
     overflowY: 'scroll',
     boxShadow: '1px 1px 4px 0px rgba(0,0,0,0.2)',
-    flex: '1 1 100px',
+    flex: '1 1 0',
 
   },
   render: {
     maxHeight: '70vh',
     overflowY: 'scroll',
-    background: '#ffffff',
+    background: '#fff',
     padding: '24px',
-    flex: '1 1 0',
+    flex: '3 1 0',
   },
   resizer: {
-    background: 'orange',
+    background: '#fafafa',
     cursor: 'pointer',
     alignItems: 'center',
     color: 'white',
-    width: '20px'
+    width: '10px'
   },
 }));
 
 function Gits() {
   const [Post, setPost] = useState(null)
   const classes = useStyles();
-  const handleGistRender = (c) => {
-    setPost(c())
-  }
 
   const leftEle = useRef(null);
   const [onMouseDown, leftX] = useEventCallback(
@@ -55,7 +51,7 @@ function Gits() {
       return event$.pipe(
         withLatestFrom(inputs$.pipe(map(([leftEle]) => leftEle))),
         switchMap(([event, leftEle]) => {
-          console.log(event);
+
           const leftStyle = getComputedStyle(leftEle.current);
           const width0 = parseFloat(leftStyle.getPropertyValue("width"));
           const startX = event.clientX;
@@ -75,7 +71,7 @@ function Gits() {
     flexGrow: leftX === null ? 1 : 0,
     flexShrink: 0
   };
-
+  // Reference: https://codesandbox.io/s/k9609z20w5
   return (
     <div className={classes.root}>
       <Helmet>
@@ -85,9 +81,10 @@ function Gits() {
       <List className={classes.list} style={leftStyle} ref={leftEle}>
         {Posts.default.map(a =>
           <ListItem
+            key={a.title}
             button
             className={classes.card}
-            onClick={() => handleGistRender(a.component)}>
+            onClick={() => setPost(a.component())}>
             <ListItemText primary={a.title} />
           </ListItem>
         )}
